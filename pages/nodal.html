@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="Logos/favicon.png" type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/carrousel.css">
+  <link rel="stylesheet" href="css/data.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <title>Amzing Events</title>
+</head>
+
+<body>
+ 
+<!-- ----------------------- INICIO VENTANA MODAL ---------------- -->
+  <div class="container">
+
+    <h1>Modal!!!</h1>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dialogo1">Abrir Modal</button>
+    <!-- ventana modal -->
+    <div class="modal fade" id="dialogo1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="exModalLabel"> Titulo del Modal </h5> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- TEXTO DEL CUERPO DEL MODAL! TEXTO DEL CUERPO DEL MODAL! TEXTO DEL CUERPO DEL MODAL! 
+                    TEXTO DEL CUERPO DEL MODAL! TEXTO DEL CUERPO DEL MODAL! TEXTO DEL CUERPO DEL MODAL! 
+                    TEXTO DEL CUERPO DEL MODAL! TEXTO DEL CUERPO DEL MODAL! TEXTO DEL CUERPO DEL MODAL!  -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- ventana modal -->
+<div class="modal fade" id="dialogo1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="main">
+                    <ul class="cards">
+                        <li class="cards_detalle">
+                            <div class="cardDetalle">
+                                <div class="card_image"><img src="${evento[i].image}"></div>
+                                <div class="card_content">
+                                    <h2 class="card_title"> ${evento[i].category}</h2>
+                                    <p class="card_text"> ${evento[i].name}</p>
+                                    <p class="card_text"> ${evento[i].date} </p>
+                                    <p class="card_text"> ${evento[i].description}</p>
+                                    <p class="card_text"> ${evento[i].place} </p>
+                                    <p class="card_text"> Capacity: ${evento[i].capacity} </p>
+                                    <p class="card_text"> ${asis_esti}: ${evento[i].assistance || evento[i].estimate} </p>
+                                    <h6 class="card_text">Price: ${evento[i].price}</h6>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- INPUTUS -->
+<!-- NOMBRE -->
+<div class="input-field">
+    <i class="fas fa-user"></i>
+    <div class="formulario__grupo" id="grupo__nombre">
+        <label for="nombre">Name</label>
+        <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe" required>
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+    </div>
+    <p class="formulario__input-error">O nome não pode estar vazío e só pode ter letras</p>
+</div>
+
+<div class="input-field">
+    <i class="fas fa-user"></i>
+    <label for="nombre">Name</label>
+    <input class="inputform" type="text" name="nombre" maxlength="50" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ]{3,23}" title="Debe indicar su nombre correctamente" required>
+  </div>
+
+<!-- TELEFONO -->
+<div class="input-field">
+    <i class="fas fa-mobile-alt"></i>
+    <div class="formulario__grupo" id="grupo__telefono">
+        <label for="telefono">Cell Phone</label>
+        <div class="formulario__grupo-input">
+            <input class="inputform" type="telf" name="telefono" maxlength="9" title="Debe indicar un númnero de telefono válido" required>
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+    </div>
+    <p class="formulario__input-error">El telefono solop puede contener nuemeros</p>
+</div>
+
+<div class="input-field">
+    <i class="fas fa-mobile-alt"></i>
+    <label for="telefono">Cell Phone</label>
+    <input class="inputform" type="telf" name="telefono" maxlength="9" title="Debe indicar un telefono válido" required>
+  </div>
+
+<!-- EMAIL -->
+
+<div class="input-field">
+    <i class="fas fa-at"></i>
+    <div class="formulario__grupo" id="grupo__email">
+        <label for="email">Email</label>
+        <div class="formulario__grupo-input">
+            <input class="inputform" type="email" name="email" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Debe indicar un correo válido" required>
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+    </div>
+    <p class="formulario__input-error">El e-mail não pode estar vacio, debe tener el seguente formato tu@email.com y solo puede contener letras, números, puntos, guiones y guión baijo.</p>
+</div>
+
+
+<div class="input-field">
+    <i class="fas fa-at"></i>
+    <label for="email">Email</label>
+    <input class="inputform" type="email" name="email" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Debe indicar un correo válido" required>
+  </div>
+
+
+<!-- MENSAJE -->
+
+<div class="input-field">
+    <i class="fas fa-pen"></i>
+    <div class="formulario__grupo" id="grupo__mensaje">
+        <label for="mensaje">Mesagge</label>
+        <div class="formulario__grupo-input">
+            <textarea name="mensaje" rows="10" length="140" required></textarea>
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+    </div>
+    <p class="formulario__input-error">Escriba su mensaje</p>
+</div>
+
+<div class="input-field">
+    <i class="fas fa-pen"></i>
+    <label for="mensaje">Mesagge</label>
+    <textarea name="mensaje" rows="10" length="140" required></textarea>
+</div>
+
+<div class="formulario__completa" id="formulario__completa">
+    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b>Por gentileza, preencha o formulario do jeito certo.</p>
+</div>
+
+</div>
+
+  <script src="JS/amazingEvents.js"></script>
+  <script src="JS/index.js"></script>
+  <script src="JS/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>
