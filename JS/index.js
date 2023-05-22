@@ -411,7 +411,7 @@ function imprimirFormulario() {
                 break;
         }
     };
-
+ /* la consola me indica un error en esta parte del codigo que no supe como solucionar */
     const validarCampo = (expresion, input, campo) => {
         if (expresion.test(input.value)) {
             document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
@@ -460,14 +460,17 @@ function imprimirFormulario() {
 function imprimirStats() {
     document.getElementById("todosLosEventos").innerHTML =
     `
-    <table>
-        <tr class="color">
+    <div class=" col-12 col-md-9 ">
+    <table class="table table-hover text-black">
+    <tbody>
+
+        <tr class="color table-primary">
           <th colspan="3">Estadísticas de Eventos</th>
         </tr>
-        <tr class="titulo">
-          <th>Eventos con Mayor Porcentaje de Asistencia</th>
-          <th>Eventos con Menor Porcentaje de Asistencia</th>
-          <th>Eventos de Mayor Capacidad</th>
+        <tr class="titulo ">
+          <td>Eventos con Mayor Porcentaje de Asistencia</td>
+          <td>Eventos con Menor Porcentaje de Asistencia</td>
+          <td class="col-3">Eventos de Mayor Capacidad</td>
         </tr>
         <tr>
           <td>Metallica en Concierto</td>
@@ -479,8 +482,8 @@ function imprimirStats() {
           <td>Avengers</td>
           <td>Feria del libro Escolar</td>
         </tr>
-        <tr class="color">
-          <th colspan="3">Estadisticas de Eventos Próximos por Catgoría</th>
+        <tr class="color table-primary">
+          <th colspan="3 ">Estadisticas de Eventos Próximos por Catgoría</th>
         </tr>
         <tr class="titulo">
           <th>Categorías</th>
@@ -502,10 +505,10 @@ function imprimirStats() {
           <td>Vamos al Cine</td>
           <td>9.000</td>
         </tr>
-        <tr class="color">
-        <th colspan="3">Estadisticas de Eventos Pasados por Catgoría</th>
+        <tr class="color table-primary">
+        <th colspan="3" >Estadisticas de Eventos Pasados por Catgoría</th>
         </tr>
-        <tr class="titulo">
+<tr class="titulo">
         <th>Categorías</th>
         <th>Ingresos</th>
         <th>Porcentaje de Asistencia</th>
@@ -530,7 +533,9 @@ function imprimirStats() {
             <td>Feria de Comida</td>
             <td>42.756</td>
         </tr>
+        </tbody>
     </table>
+    </div>
     `
 }
 
