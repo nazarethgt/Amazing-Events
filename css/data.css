@@ -328,16 +328,29 @@ textarea{
   font-size: 16px; 
   padding-top: 3px;
 }
-@media (max-width: 400px) {
-  div.form {width: 90%; padding: 20px 10px;}
-  input, textarea {width: 83%;}
-  .input-field i {margin: 0px 1rem 0px 0.6rem;}
-  label {left: 0.7rem;}
+
+.formulariomensaje-exito {
+  font-size: 1.25em;
+  color: #119200;
+  display: none;
+  margin-top: 15px;
 }
 
 .ceroResult{
   font-size: 40px;
   color:red;
+}
+
+
+.formulariomensaje-exito-activo {
+  display: block;
+}
+
+@media (max-width: 400px) {
+  div.form {width: 90%; padding: 20px 10px;}
+  input, textarea {width: 83%;}
+  .input-field i {margin: 0px 1rem 0px 0.6rem;}
+  label {left: 0.7rem;}
 }
 
 @media screen and (max-width: 680px) {

@@ -17,7 +17,7 @@ var dataAmazing =
       {
         "id": 2,
         "image":"Salida al museo5.jpg",
-        "name": "Parque Juracico",
+        "name": "Parque Jurásico",
         "date": "2021-11-02",
         "description": "Vamos al museo de paleontologia a hacer un recorrido increible para conocer los mas grandes dinosaurios",
         "category":"Salida al museo",

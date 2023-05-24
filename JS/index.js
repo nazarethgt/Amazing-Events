@@ -281,8 +281,8 @@ function changePage(i) {
 function imprimirFormulario() {
     document.getElementById("todosLosEventos").innerHTML =
         `
-        <div class="form" id="formulario">
-            <form class="formulario" method="POST" action="">
+        <div class="form">
+            <form class="formulario" method="POST" action="" id="formulario">
               
                 <div class="input-field">
                     <i class="fas fa-user"></i>
@@ -292,8 +292,8 @@ function imprimirFormulario() {
                             <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe" required>
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
+                        <p class="formulario__input-error">El nombre no puede estar vacío y solo puede contener letras</p>
                     </div>
-                    <p class="formulario__input-error">El nombre no puede estar vacío y solo puede contener letras</p>
                 </div>
 
                 <div class="input-field">
@@ -304,8 +304,8 @@ function imprimirFormulario() {
                             <input class="formulario__input" type="text" name="telefono" id="telefono" placeholder="11 5555 5555" required>
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
+                        <p class="formulario__input-error">El teléfono solo puede contener números</p>
                     </div>
-                    <p class="formulario__input-error">El teléfono solo puede contener números</p>
                 </div>
 
 
@@ -317,8 +317,8 @@ function imprimirFormulario() {
                             <input class="formulario__input" type="email" name="email" id="email" placeholder="aevents@mail.com" required>
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
+                        <p class="formulario__input-error">El e-mail no puede estar vacío, debe tener el siguiente formato tu@email.com y solo puede contener letras, números, puntos, guiones y guión bajo.</p>
                     </div>
-                    <p class="formulario__input-error">El e-mail no puede estar vacío, debe tener el siguiente formato tu@email.com y solo puede contener letras, números, puntos, guiones y guión bajo.</p>
                 </div>
 
                 <div class="input-field">
@@ -329,22 +329,22 @@ function imprimirFormulario() {
                             <input type="text" class="formulario__input" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escriba aquí su mensaje.">
                             <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
+                        <p class="formulario__input-error">Escriba su mensaje</p>
                     </div>
-                    <p class="formulario__input-error">Escriba su mensaje</p>
                 </div>
 
                 <div class="formulario__completa" id="formulario__completa">
                     <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor, complete el formulario correctamente.</p>
                 </div>
 
-                <div class="btn-block">
+                <div class="btn-block formulario__grupo formulario__grupo-btn-enviar">
                     <button class="btn" type="submit" data-bs-toggle="modal" data-bs-target="#agradecimiento"><i class="fas fa-paper-plane"></i>Submit</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito"> <!--Formulario enviado con éxito--> </p>
                 </div>
-
             </form>
         </div>
 
-        <!-- ventana modal 
+        <!-- ventana modal--> 
         <div class="modal fade" id="agradecimiento">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -360,7 +360,7 @@ function imprimirFormulario() {
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
     `;
 
     const formulario = document.getElementById('formulario');
@@ -411,7 +411,7 @@ function imprimirFormulario() {
                 break;
         }
     };
- /* la consola me indica un error en esta parte del codigo que no supe como solucionar */
+ 
     const validarCampo = (expresion, input, campo) => {
         if (expresion.test(input.value)) {
             document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
@@ -483,7 +483,7 @@ function imprimirStats() {
           <td>Feria del libro Escolar</td>
         </tr>
         <tr class="color table-primary">
-          <th colspan="3 ">Estadisticas de Eventos Próximos por Catgoría</th>
+          <th colspan="3 ">Estadísticas de eventos próximos por categoría</th>
         </tr>
         <tr class="titulo">
           <th>Categorías</th>
@@ -506,7 +506,7 @@ function imprimirStats() {
           <td>9.000</td>
         </tr>
         <tr class="color table-primary">
-        <th colspan="3" >Estadisticas de Eventos Pasados por Catgoría</th>
+        <th colspan="3" >Estadísticas de eventos pasados por categoría</th>
         </tr>
 <tr class="titulo">
         <th>Categorías</th>
@@ -601,102 +601,3 @@ function filtrosCombinados() {
         displayCards(filtrado) :
         ulNombreEventos.innerHTML = `<h1 class="ceroResult" >No se encontraron eventos para tu búsqueda </h1>`
 }
-
-
-// -------------------- VALIDACIÓN DEL FORMULARIO ----------------------------------
-
-// const menu = document.getElementById('check')
-// const opcion = document.querySelectorAll('#menu-bar a')  
-
-// menu.addEventListener('change', () => {
-//    if(menu.checked){
-//         opcion.forEach((opcion) => {
-//             opcion.addEventListener('click', () => {
-//                 menu.checked = false
-//             })
-//         })
-//     }else{
-//         console.log('no se esta detectanto el evento')
-//     }
-// })
-
-// formulario
-// const formulario = document.getElementById('formulario');
-// const inputs = document.querySelectorAll('#formulario input');
-
-
-// const expresiones = { // Expresiones regulares
-//     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-// 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,//Letras numeros, guiones y guion bajo
-// 	telefono: /^[0-9]{1,15}$/, // Cualquier caractter maximo 50
-// 	mensaje: /^[a-zA-ZÀ-ÿ\s\W]{5,200}$/ // Cualqioer caracter maximo 200
-// }
-
-// const campos = {
-//     nombre: false,
-// 	email: false,
-// 	telefono: false,
-// 	mensaje: false
-// }
-
-// const validarFormulario = (e) => {
-// 	switch (e.target.name){
-// 		case "nombre": 
-// 			validarCampo(expresiones.nombre, e.target, 'nombre');
-// 		break;
-// 		case "email": 
-// 			validarCampo(expresiones.email, e.target, 'email');
-// 		break;
-// 		case "telefono": 
-// 			validarCampo(expresiones.asunto, e.target, 'asunto');
-// 		break;
-// 		case "mensaje": 
-//             // validarTextMensaje();
-// 			validarCampo(expresiones.mensaje, e.target, 'mensaje');
-// 		break;
-// 	}
-// }
-
-// const validarCampo = (expresion, input, campo) => {
-// 	if(expresion.test(input.value)) {
-// 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto')
-// 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto')
-// 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle')
-// 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle')
-// 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo')
-// 		campos[campo] = true
-// 	} else {
-// 		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto')
-// 		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto')
-// 		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle')
-// 		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle')
-// 		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo')
-// 		campos[campo] = false
-// 	}
-// }
-
-// inputs.forEach((input) => {
-// 	input.addEventListener('keyup', validarFormulario)
-// 	input.addEventListener('blur', validarFormulario)
-// })
-
-// formulario.addEventListener('submit', (e) => {
-// 	e.preventDefault()
-
-// 	const terminos = document.getElementById('terminos')
-// 	if(campos.nombre && campos.email && campos.asunto && campos.mensaje){
-// 		formulario.reset();
-
-// 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo')
-// 		document.getElementById('formulario__completa').classList.remove	('formulario__completa-activo')
-// 		setTimeout(() => {
-// 			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo')
-// 		}, 5000)
-
-// 		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-// 			icono.classList.remove('formulario__grupo-correcto')
-// 		})
-// 	}else {
-// 		document.getElementById('formulario__completa').classList.add('formulario__completa-activo')
-// 	}
-// }
