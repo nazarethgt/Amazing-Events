@@ -36,25 +36,14 @@ async function getData() {
 
 getData()
 
-// document.getElementById("masDetalles").addEventListener("click",desactivar)
 
-// function desactivar() {
-//     document.querySelector("a").addEventListener("click",borrarComprtamiento)
-// }
 
-// function borrarComprtamiento(e) {
-//     var evento = e
-//     evento.preventDefault()
-// }
-
-//Permite navegar entre las opciones
 var buttonNavegacion = []
 var buttonNav = document.getElementsByClassName("navlink")
 for (var i = 0; i < buttonNav.length; i++) {
     const element = buttonNav[i]
     buttonNavegacion.push(buttonNav[i].innerText)
     element.addEventListener("click", function (e) {
-        //setState("paginaANavegar", e.target.id)
         document.getElementById("name").innerHTML = e.target.innerText
         imprimir(e.target.id);
     })
@@ -66,8 +55,7 @@ function imprimir(id) {
             arrayAFiltrar = eventosFuturos
             inputSearch.value = ""
             checkedCheckboxes = []
-            searchContainer.style.display = "flex"
-            // stats.style.display ="none"
+            searchContainer.style.display = "flex"  
             displayCards(eventosFuturos)
             eventsCategories(eventosFuturos)
             textoHTML.innerHTML = ""
@@ -91,8 +79,6 @@ function imprimir(id) {
             searchContainer.style.display = "none"
             break;
         default:
-            // setState("paginaANavegar", "home")
-            //let InitAppStyle = document.getElementById("home")
             arrayAFiltrar = eventos
             searchContainer.style.display = "flex"
             displayCards(eventos)
@@ -101,7 +87,6 @@ function imprimir(id) {
     }
 }
 
-//me imprime todas las tarjetas dependiendo de donde esté ubicado
 function displayCards(array) {
     var url
     if (location.pathname == "/pages/detalle.html") {
@@ -165,25 +150,11 @@ function displayCards(array) {
 
 
     `
-        // var text = `Este es el id => ${array[i].id}`
-        // console.log(text)
     }
     document.getElementById("todosLosEventos").innerHTML = html;
 }
 
 
-//     // document.getElementById("todosLosEventos").innerHTML = html;
-// }
-
-// //Detalle
-// function detalle(id) {
-//     document.getElementById("todosLosEventos").innerHTML =
-//         `
-// <h1></h1>
-//  `
-// }
-
-//Toma el valor del location.search?TIME  Cuando me devuelvo del detalle
 var time = location.search.split("?time=")
 
 switch (time[1]) {
@@ -239,7 +210,6 @@ buttonafter.addEventListener("click", function (e) {
 })
 
 
-//CARRUSEL
 function changePage(i) {
     switch (i) {
         case 0: displayCards(eventos)
@@ -344,16 +314,15 @@ function imprimirFormulario() {
             </form>
         </div>
 
-        <!-- ventana modal--> 
         <div class="modal fade" id="agradecimiento">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exModalLabel"> Hola (nombre de la persona) </h5>
+                        <h5 class="modal-title" id="exModalLabel"> </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        muchas gracias por tu mensaje, nos contactaremos a la brevedad.
+                        Muchas gracias por tu mensaje, nos contactaremos a la brevedad.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -381,11 +350,11 @@ function imprimirFormulario() {
 
     const inputs = document.querySelectorAll('#formulario input');
 
-    const expresiones = { // Expresiones regulares
-        nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, // Letras, números, guiones y guion bajo
-        telefono: /^[0-9]{1,15}$/, // Números
-        mensaje: /^[a-zA-ZÀ-ÿ\s\W]{5,200}$/ // Cualquier caracter, máximo 200
+    const expresiones = { 
+        nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
+        email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, 
+        telefono: /^[0-9]{1,15}$/, 
+        mensaje: /^[a-zA-ZÀ-ÿ\s\W]{5,200}$/ 
     };
 
     const campos = {
@@ -508,7 +477,7 @@ function imprimirStats() {
         <tr class="color table-primary">
         <th colspan="3" >Estadísticas de eventos pasados por categoría</th>
         </tr>
-<tr class="titulo">
+        <tr class="titulo">
         <th>Categorías</th>
         <th>Ingresos</th>
         <th>Porcentaje de Asistencia</th>
@@ -547,7 +516,6 @@ inputSearch.addEventListener("keyup", function (evento) {
     filtrosCombinados()
 })
 
-//Creación dinámica de los checbox
 function eventsCategories(array) {
     let categories = array.map(evento => evento.category)
     let unica = new Set(categories)

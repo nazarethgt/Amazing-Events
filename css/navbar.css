@@ -78,8 +78,6 @@ div.container a
 
 
 
-/* ------------------ Mejoras Nazareth ------------------------ */
-
 #check {
     display: none;
 }
@@ -104,7 +102,7 @@ header {
     width: 100%;
 } 
 
-.nav-bar { /* contenedor del menu navbar */
+.nav-bar { 
     background-color: #3a3a3a;
     display: flex;
     height: auto; 
@@ -151,7 +149,6 @@ header {
 }
 
 
-/* FORMULARIO DE CONTACTO*/
 
 .formulario {
     display: grid;
@@ -279,7 +276,6 @@ header {
     }
 
     .nav-menu {
-        /* top: 75px; */
         left: 0;
         top: 0;
 
@@ -299,8 +295,6 @@ header {
     }
 
     .nav-menu {
-        /* display: flex;
-        align-items: center; */
         display: inline-block;
         position: relative;
         height: 100px;
@@ -314,7 +308,6 @@ header {
     .nav-menu li {
         display: inline-block;
         line-height: 100px;
-        /* margin: 0 10px; */
         transition: none;
     }
 

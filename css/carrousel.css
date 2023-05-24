@@ -30,7 +30,6 @@
   .current-slider {
     visibility: visible;
     opacity: 1;
-    /* transition: visibility 1s, opacity 1s; */
   }
 
   .carousel{
@@ -44,7 +43,6 @@
   }
 
 
-  /* -------------------- Mejoras Nazareth --------------- */
 
   @media screen and (max-width: 680px) {
     .carrusel {
@@ -56,8 +54,6 @@
 
 @media screen and (max-width: 760px) {
   .carrusel {
-    /* width: 95%;
-    margin: auto; */
     padding-top: 145px;
   }
 

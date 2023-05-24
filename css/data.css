@@ -1,6 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700'); */
 
-/* Design */
 *,
 *::before,
 *::after {
@@ -17,8 +16,9 @@ body {
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
-  /* padding: 1rem; */
 }
+
+
 a{
   text-decoration: none;
 
@@ -40,11 +40,10 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* overflow: hidden; */
   box-sizing: border-box;
 }
 
-.btn {  /* boton cerrar de la modal */
+.btn {  
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
@@ -60,7 +59,7 @@ img {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-.cards { /* contenedor de todas las tarjetas */
+.cards { 
   align-items: center;
   justify-content: space-evenly;
   display: flex;
@@ -75,7 +74,7 @@ img {
   padding: 1rem;
 }
 
-.card-image img /* imagen de la tarjeta */
+.card-image img 
 {
   margin-top: 15px;
   width: 250px;
@@ -84,7 +83,7 @@ img {
 }
 
 
-.card_title { /* titulo de la tarjeta */
+.card_title { 
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -92,7 +91,7 @@ img {
   margin: 0px;
 }
 
-.card_text { /* texto de la tarjeta */
+.card_text { 
   color: #040404;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -101,7 +100,7 @@ img {
   justify-content: center;
 }
 
-.cards_detalle { /* contenedor de la tarjeta en modal */
+.cards_detalle { 
   display: flex;
   border-radius: 10px;
   box-shadow: 20px 20px 20px -4px rgba(0, 0, 0, 0.70);
@@ -112,20 +111,12 @@ img {
   border: 1px solid #3A0CA3;
 }
 
-/* .card_body
-{
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-} */
 
 .card_body h6 {
 margin: auto;
 }
 
-.card_btn{ /* boton ver más */ 
+.card_btn{ 
   width: 100px;
   height: 35px;
   color: #ffffff;
@@ -199,7 +190,7 @@ margin: auto;
   text-align: center;
 }
 
-/* Search */
+
 .searchContainer{
   width: 95%;
   margin: auto;
@@ -248,9 +239,9 @@ input[type="checkbox" i] {
 }
 
 
-/* FORMULARIO */
 
- div.form {
+
+div.form {
   width: 100%;
   max-width: 450px;
   border: 2px solid #3A0CA3;
@@ -262,7 +253,7 @@ input[type="checkbox" i] {
 .input-field {
   position: relative;
 }
-.input-field i { /* iconos del formulario */
+.input-field i { 
   color: #3A0CA3;
   margin: 0px 1rem;
   font-size: 25px;

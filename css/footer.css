@@ -25,8 +25,6 @@ footer */
 .footer_social{
     display: flex;
     padding-top: 30px;
-    /* controlar el desbordamiento */
-    /* flex-wrap: wrap; */
 
 }
 
