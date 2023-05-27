@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="Logos/favicon.png" type="image/x-icon">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/carrousel.css">
+  <link rel="stylesheet" href="css/data.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <title>Amzing Events</title>
+</head>
+
+<body>
+  <header>
+      <nav class="nav-bar">
+        <div class="top-left">
+          <div class="logo">
+            <a href="index.html?time=home">
+              <img class="logoaventegs" src="LogoAmazingEvents.png" alt="Logo Amazing Events">
+            </a>
+          </div>
+        </div>
+    
+        <div class="top-links"> 
+          <div class="container">
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="nav-menu" id="menu-bar">
+              <li><a class="navlink" id="home"> HOME</a></li>
+              <li><a class="navlink" id="upcomingEvents"> UPCOMING EVENTS</a></li>
+              <li><a class="navlink" id="pastEvents">PAST EVENTS</a></li>
+              <li><a class="navlink" id="contact">CONTACT</a></li>
+              <li><a class="navlink" id="stats">STATS</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
+
+  <section class="carousel" id="carrousel">
+    <div class="containerCarrousel">
+      <a class="arrow-after" id="after">&#10094;</a>
+      <h1 class="title nombrePage" id="name">HOME</h1>
+      <a class="arrow-next" id="next">&#10095;</a>
+    </div>
+  </section>
+
+  <div class="searchContainer" id="searchContainer">
+    <div id="checkcategories"></div>
+    <input type="text" id="inputSearch" placeholder="Busca tu evento preferido">
+  </div>
+
+  <main>
+    <div class="main">
+      <ul class="cards" id="todosLosEventos">
+      </ul>
+    </div>
+  </main>
+
+  <div id="form"></div>
+  <div id="eventos"></div>
+
+  <!-- <div id="statsAE"></div> -->
+
+  <footer class="footer">
+    <div class="footer_container container">
+      <div class="footer_contact">
+        <div class="footer_texts">
+
+          <div class="footer_social">
+
+            <a href="https://www.instagram.com/otra_naza_mas/" class="footer_link" target="_blank">
+              <img src="assets/bxl-instagram.svg" class="footer_icon" alt="Logo de instagram">
+            </a>
+
+            <a href="https://es-la.facebook.com" class="footer_link" target="_blank">
+              <img src="assets/bxl-meta.svg" class="footer_icon" alt="Logo de facebook">
+            </a>
+
+            <a href="https://twitter.com/otra_naza_mas" class="footer_link" target="_blank">
+              <img src="assets/bxl-twitter.svg" class="footer_icon" alt="Logo de twitter">
+            </a>
+
+            <a href="https://github.com/nazarethgt" class="footer_link" target="_blank">
+              <img src="assets/bxl-github.svg" class="footer_icon" alt="Logo de github">
+            </a>
+
+          </div>
+        </div>
+       
+      </div>
+      <p class="footer_copyright">&copy;<strong>Nazareth González</strong></p>
+    </div>
+  </footer>
+
+
+
+  <script src="JS/amazingEvents.js"></script>
+  <script src="JS/index.js"></script>
+  <!-- <script src="JS/stats.js"></script> -->
+  <script src="JS/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "",
+      authDomain: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: "",
+      appId: ""
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+
+</body>
+
+</html>
+

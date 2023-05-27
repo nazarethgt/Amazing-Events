@@ -1,0 +1,64 @@
+.containerCarrousel {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(to bottom left, #3A0CA3 40%, #ffc39ed1 100%);
+    
+  }
+  
+  .containerCarrousel a {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    top: 50%;
+    transform: translatey(-50%);
+  }
+  
+  .arrow-next {
+    left: 90%;
+  }
+
+  .arrow-after {
+    left: 10%;
+  }
+  
+  .containerCarrousel a:hover {
+    color: gray;
+  }
+  
+  .current-slider {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .carousel{
+    padding-top: 145px;
+  }
+
+  .title{
+    padding-top: 10px;
+    font-size: 4rem;
+    color: white;
+  }
+
+
+
+  @media screen and (max-width: 680px) {
+    .carrusel {
+      width: 95%;
+      margin: auto;
+      padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+  .carrusel {
+    padding-top: 145px;
+  }
+
+  .title {
+    font-size: 3rem;
+    padding-top: 35px;
+  }
+}
